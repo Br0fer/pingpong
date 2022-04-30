@@ -1,6 +1,8 @@
 from pygame import *
 
 img_back = ""
+img_racket = ""
+img_ball = ""
 
 class GameSprite(sprite.Sprite):
     def __init__(self, player_img, player_x, player_y, player_speed, width, height):
