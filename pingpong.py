@@ -27,12 +27,20 @@ class Player(GameSprite):
             self.rect.y -= self.speed
         if keys[K_s] and self.rect.y < 420:
             self.rect.y += self.speed
-        
-
-        
-        
+                
 win_width = 600
 win_height = 500
 display.set_caption("PingPong")
 window = display.set_mode((win_width, win_height))
 background = transform.scale(image.load(img_back), (win_width, win_height))
+
+finish = False
+game = True
+clock = time.Clock()
+FPS = 60
+
+racket1 = Player("racket.png", 30, 200, 4, 25, 75)
+racket2 = Player("racket.png", 520, 200, 4, 25, 75)
+ball = GameSprite("")
+
+while game:
